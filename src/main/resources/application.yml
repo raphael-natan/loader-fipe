@@ -1,0 +1,23 @@
+# Application
+application:
+  batch:
+    settings:
+      chunkSize: 500
+      volumes:
+        basepath: '/home/mario/Documents/Pessoal/conhecimento-adquirido/mao-na-roda/fipe/'
+        filename: 'fipe.csv'
+
+# Spring
+spring:
+  datasource:
+    url: ${URL_MYSQL:jdbc:mysql://localhost:3306/maonaroda?useTimezone=true&serverTimezone=GMT-3}
+    username: ${USER_MYSQL_AZ:maonaroda}
+    password: ${PW_MYSQL_AZ:16deabrilde2019}
+  jackson:
+    default-property-inclusion: non_null
+    date-format: com.fasterxml.jackson.databind.util.ISO8601DateFormat
+    serialization:
+      write_dates_as_timestamps: false
+      write_date_timestamps_as_nanoseconds: false
+  batch:
+    initialize-schema: always
