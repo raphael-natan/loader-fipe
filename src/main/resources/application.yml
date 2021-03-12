@@ -4,8 +4,8 @@ application:
     settings:
       chunkSize: 500
       volumes:
-        basepath: '/home/mario/Documents/Pessoal/conhecimento-adquirido/mao-na-roda/fipe/'
-        filename: 'fipe.csv'
+        basepath: ${BASEPATH_FILE:'/home/mario/Documents/Pessoal/conhecimento-adquirido/mao-na-roda/loader-fipe/fipe'}
+        filename: ${FILENAME:'fipe.csv'}
 
 # Spring
 spring:
