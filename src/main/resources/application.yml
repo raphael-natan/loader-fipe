@@ -4,13 +4,13 @@ application:
     settings:
       chunkSize: 500
       volumes:
-        basepath: ${BASEPATH_FILE:'/home/mario/Documents/Pessoal/conhecimento-adquirido/mao-na-roda/loader-fipe/fipe'}
-        filename: ${FILENAME:'fipe.csv'}
+        basepath: ${BASEPATH_FILE:./fipe/}
+        filename: ${FILENAME:fipe.csv}
 
 # Spring
 spring:
   datasource:
-    url: ${URL_MYSQL:jdbc:mysql://localhost:3306/maonaroda?useTimezone=true&serverTimezone=GMT-3}
+    url: ${URL_MYSQL:jdbc:mysql://localhost:3306/maonaroda?useTimezone=true&serverTimezone=GMT-3&rewriteBatchedStatements=true}
     username: ${USER_MYSQL_AZ:maonaroda}
     password: ${PW_MYSQL_AZ:16deabrilde2019}
   jackson:
